@@ -18,4 +18,7 @@
 # Manually created additions
 
 ### Nikola ###
-sites/demo
+nikola/sites/demo
+
+### Qgoda ###
+qgoda/sites/demo
