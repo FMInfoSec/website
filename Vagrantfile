@@ -16,6 +16,9 @@ Vagrant.configure("2") do |config|
 
   ### Ubuntu Docker ###
   config.vm.box = "ubuntu/bionic64"
-  config.vm.provision "docker", images: ["gflohr/qgoda"]
+  config.vm.provision "docker" do |d|
+    d.pull_images "gflohr/qgoda"
+    d.pull_images "gohugoio/hugo"
+  end
 
 end
