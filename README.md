@@ -1,6 +1,6 @@
-# Muirne
+# Codename Muirne
 
-A development environment for the website of FMInfoSec
+Site development for FMInfoSec.
 
 ## Acknowledgements
 
