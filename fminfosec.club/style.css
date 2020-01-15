@@ -1,0 +1,13 @@
+header,main,footer {
+  max-width: 60%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#copyright {
+  text-align: center;
+}
