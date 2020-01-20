@@ -1,0 +1,22 @@
+name: Deploy Website Update to Dreamhost
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      with:
+        ftp_server: fminfosec.club
+        ftp_username: dh_zm85fr
+        ftp_password: ${{ secrets.DREAMHOST_FTP_PASSWORD }}
+        method: sftp
+        local_dir: fminfosec.club
+        remote_dir: fminfosec.club
+        ARGS: --dry-run
