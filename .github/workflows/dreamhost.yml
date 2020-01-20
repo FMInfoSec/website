@@ -11,13 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      uses: sebastianpopp/ftp-action@v1.1.0
       with:
-        ftp_server: fminfosec.club
-        ftp_username: dh_zm85fr
-        ftp_password: ${{ secrets.DREAMHOST_FTP_PASSWORD }}
-        method: sftp
-        port: 22
+        host: sftp://fminfosec.club
+        user: dh_zm85fr
+        password: ${{ secrets.DREAMHOST_FTP_PASSWORD }}
         local_dir: fminfosec.club
         remote_dir: fminfosec.club
-        ARGS: --dry-run
