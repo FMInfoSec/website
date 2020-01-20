@@ -17,6 +17,7 @@ jobs:
         ftp_username: dh_zm85fr
         ftp_password: ${{ secrets.DREAMHOST_FTP_PASSWORD }}
         method: sftp
+        port: 22
         local_dir: fminfosec.club
         remote_dir: fminfosec.club
         ARGS: --dry-run
