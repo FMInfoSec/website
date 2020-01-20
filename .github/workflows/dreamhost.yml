@@ -4,17 +4,19 @@ on:
   push:
     branches: 
       - master
+    paths:
+      - 'fminfosec.club/**'
 
 jobs:
-  build:
+  sftp:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: FTP Deploy
-      uses: sebastianpopp/ftp-action@v1.1.0
-      with:
-        host: sftp://fminfosec.club
-        user: dh_zm85fr
-        password: ${{ secrets.DREAMHOST_FTP_PASSWORD }}
-        local_dir: fminfosec.club
-        remote_dir: fminfosec.club
+      - uses: actions/checkout@master
+      - name: Copy files to Dreamhost server
+        uses: appleboy/scp-action@v0.0.1
+        with: 
+          host: fminfosec.club
+          username: dh_zm85fr
+          password: ${{ secrets.DREAMHOST_FTP_PASSWORD }}
+          source: "fminfosec.club/**"
+          target: "fminfosec.club"
