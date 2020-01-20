@@ -1,4 +1,4 @@
-name: Deploy Website Update to Dreamhost
+name: Deploy
 
 on:
   push:
