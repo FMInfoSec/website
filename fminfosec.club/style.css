@@ -14,11 +14,8 @@ a {
 }
 
 h1 {
-  text-transform: uppercase;
-}
-
-h2 {
   text-align: center;
+  text-transform: uppercase;
 }
 
 #copyright {
