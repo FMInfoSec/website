@@ -18,6 +18,12 @@ h1 {
   text-transform: uppercase;
 }
 
+noscript {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 #copyright {
   text-align: center;
 }
