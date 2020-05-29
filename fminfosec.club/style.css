@@ -18,7 +18,7 @@ h1 {
   text-transform: uppercase;
 }
 
-noscript {
+#noscript {
   color: red;
   text-transform: uppercase;
   font-weight: bold;
