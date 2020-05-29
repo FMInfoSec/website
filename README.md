@@ -6,4 +6,4 @@ FMInfoSec is a local meetup of information security professionals and non-profes
 
 ## Acknowledgements
 
-- I based the design for this website off of ReconSec's [OpenSOC](opensoc.io) homepage, since I really liked the way they did their one-page design.
+- Even though this website is very basic by comparison, I drew some inspiration for the one-page design from ReconSec's [OpenSOC](opensoc.io) homepage.
