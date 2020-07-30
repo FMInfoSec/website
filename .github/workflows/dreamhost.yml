@@ -1,0 +1,29 @@
+name: Publish
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+
+    # Publishes the website static code to the webserver
+    - name: Send files to Dreamhost webserver
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with: 
+        ftp-server: ${{ secrets.DREAMHOST_SERVER }}
+        ftp-username: ${{ secrets.DREAMHOST_USERNAME }}
+        ftp-password: ${{ secrets.DREAMHOST_PASSWORD }}
+        known-hosts: ${{ secrets.DREAMHOST_KNOWNHOSTS }}
+        local-dir: fminfosec.club/
