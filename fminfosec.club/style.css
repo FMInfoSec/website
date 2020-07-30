@@ -18,6 +18,19 @@ h1 {
   text-transform: uppercase;
 }
 
+.event-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event-heading {
+  flex: 100%;
+}
+
+.event-list {
+  flex: 1;
+}
+
 #noscript {
   color: red;
   text-transform: uppercase;
