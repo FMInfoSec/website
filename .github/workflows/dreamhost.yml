@@ -25,5 +25,4 @@ jobs:
         target-server: ${{ secrets.DREAMHOST_SERVER }}
         remote-user: ${{ secrets.DREAMHOST_USERNAME }}
         private-ssh-key: ${{ secrets.DREAMHOST_PASSWORD }}
-        known-hosts: ${{ secrets.DREAMHOST_KNOWNHOSTS }}
         destination-path: ~/fminfosec.club/
