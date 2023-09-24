@@ -20,10 +20,10 @@ jobs:
 
     # Publishes the website static code to the webserver
     - name: Send files to Dreamhost webserver
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/web-deploy@v1
       with: 
-        ftp-server: ${{ secrets.DREAMHOST_SERVER }}
-        ftp-username: ${{ secrets.DREAMHOST_USERNAME }}
-        ftp-password: ${{ secrets.DREAMHOST_PASSWORD }}
+        target-server: ${{ secrets.DREAMHOST_SERVER }}
+        remote-user: ${{ secrets.DREAMHOST_USERNAME }}
+        private-ssh-key: ${{ secrets.DREAMHOST_PASSWORD }}
         known-hosts: ${{ secrets.DREAMHOST_KNOWNHOSTS }}
-        local-dir: fminfosec.club/
+        destination-path: ~/fminfosec.club/
