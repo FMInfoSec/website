@@ -17,11 +17,10 @@ jobs:
       - name: Check out code    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v4
 
-    # Publishes the website static code to the webserver
-    - name: Send files to Dreamhost webserver
-      uses: SamKirkland/web-deploy@v1
-      with: 
-        target-server: ${{ secrets.DREAMHOST_SERVER }}
-        remote-user: ${{ secrets.DREAMHOST_USERNAME }}
-        private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        destination-path: ~/fminfosec.club/
+      - name: Send files to Dreamhost webserver    # Publishes the website static code to the webserver
+        uses: SamKirkland/web-deploy@v1
+        with: 
+          target-server: ${{ secrets.DREAMHOST_SERVER }}
+          remote-user: ${{ secrets.DREAMHOST_USERNAME }}
+          private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          destination-path: ~/fminfosec.club/
