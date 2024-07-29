@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Check out code    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v4
+        with:
+          path: website
 
       - name: Copy files to Dreamhost webserver    # Publishes the website static code to the webserver
         run: |
