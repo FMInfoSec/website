@@ -23,4 +23,4 @@ jobs:
           ssh-keyscan -Ht ed25519 fminfosec.club > $HOME/.ssh/known_hosts
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_ed25519
           chmod 600 $HOME/.ssh/id_ed25519
-          scp $GITHUB_WORKSPACE/fminfosec.club/* "${{ secrets.DREAMHOST_USERNAME }}"@fminfosec.club:$HOME/fminfosec.club
+          scp website/fminfosec.club/* "${{ secrets.DREAMHOST_USERNAME }}"@fminfosec.club:$HOME/fminfosec.club
