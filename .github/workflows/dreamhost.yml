@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Check out code    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v4
-        with:
-          path: website
 
       - name: Copy files to Dreamhost webserver    # Publishes the website static code to the webserver
         run: |
@@ -25,4 +23,4 @@ jobs:
           ssh-keyscan -Ht ed25519 fminfosec.club > $HOME/.ssh/known_hosts
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_ed25519
           chmod 600 $HOME/.ssh/id_ed25519
-          scp website/fminfosec.club/* "${{ secrets.DREAMHOST_USERNAME }}"@fminfosec.club:$HOME/fminfosec.club
+          scp work/website/website/fminfosec.club/* "${{ secrets.DREAMHOST_USERNAME }}"@fminfosec.club:$HOME/fminfosec.club
