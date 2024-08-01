@@ -23,7 +23,6 @@ jobs:
           mkdir -vm 700 $HOME/.ssh
           ssh-keyscan -Ht ed25519 fminfosec.club > $HOME/.ssh/known_hosts
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_ed25519
-          cat $HOME/.ssh/id_ed25519
           chmod 600 $HOME/.ssh/id_ed25519
-          ls -al $HOME/.ssh/
+          ssh ${{ secrets.DREAMHOST_USERNAME }}@fminfosec.club -t 'pwd'
           # scp "${{ github.action_path }}"/fminfosec.club/* "${{ secrets.DREAMHOST_USERNAME }}"@fminfosec.club:$HOME/fminfosec.club
