@@ -21,7 +21,7 @@ jobs:
         run: |
           find $HOME -name fminfosec.club
           cat ${{ github.workspace }}/fminfosec.club/index.html
-          # mkdir -vm 700 $HOME/.ssh
+          mkdir -vm 700 $HOME/.ssh
           # ssh-keyscan -Ht ed25519 fminfosec.club > $HOME/.ssh/known_hosts
           # echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_ed25519
           # chmod 600 $HOME/.ssh/id_ed25519
