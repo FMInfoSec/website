@@ -19,8 +19,12 @@ jobs:
 
       - name: Copy files to Dreamhost webserver    # Publishes the website static code to the webserver
         run: |
-          mkdir -vm 700 $HOME/.ssh
-          ssh-keyscan -Ht ed25519 fminfosec.club > $HOME/.ssh/known_hosts
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_ed25519
-          chmod 600 $HOME/.ssh/id_ed25519
-          scp "${{ github.action_path }}"/fminfosec.club/* "${{ secrets.DREAMHOST_USERNAME }}"@fminfosec.club:$HOME/fminfosec.club
+          echo ${{ github.workspace }}
+          echo $GITHUB_WORKSPACE
+          echo $HOME
+          find $HOME -name fminfosec.club
+          # mkdir -vm 700 $HOME/.ssh
+          # ssh-keyscan -Ht ed25519 fminfosec.club > $HOME/.ssh/known_hosts
+          # echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_ed25519
+          # chmod 600 $HOME/.ssh/id_ed25519
+          # scp "${{ github.action_path }}"/fminfosec.club/* "${{ secrets.DREAMHOST_USERNAME }}"@fminfosec.club:$HOME/fminfosec.club
