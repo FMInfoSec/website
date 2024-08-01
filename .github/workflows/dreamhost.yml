@@ -19,7 +19,6 @@ jobs:
 
       - name: Copy files to Dreamhost webserver    # Publishes the website static code to the webserver
         run: |
-          ls ${{ github.workspace }}/fminfosec.club/
           mkdir -vm 700 $HOME/.ssh
           ssh-keyscan -Ht ed25519 fminfosec.club > $HOME/.ssh/known_hosts
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_ed25519
