@@ -40,3 +40,11 @@ h1 {
 #copyright {
   text-align: center;
 }
+
+#mc_embed_signup{
+  background:#fff;
+  color: #000;
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 600px;
+}
