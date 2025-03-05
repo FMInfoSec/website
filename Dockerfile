@@ -7,7 +7,7 @@
 # Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
 
 ARG NODE_VERSION=current-alpine3.21
-ARG PNPM_VERSION=10.x
+ARG PNPM_VERSION=latest
 
 FROM node:${NODE_VERSION}
 
