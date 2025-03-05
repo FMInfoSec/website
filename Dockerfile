@@ -6,10 +6,10 @@
 
 # Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
 
-ARG NODE_VERSION=23.9.0
+ARG NODE_VERSION=current-alpine3.21
 ARG PNPM_VERSION=10.x
 
-FROM node:${NODE_VERSION}-alpine
+FROM node:${NODE_VERSION}
 
 # Use production node environment by default.
 ENV NODE_ENV production
